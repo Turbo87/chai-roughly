@@ -1,4 +1,4 @@
-test/
+test.js
 .gitignore
 .travis.yml
 appveyor.yml
