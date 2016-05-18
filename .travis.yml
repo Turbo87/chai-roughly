@@ -4,3 +4,11 @@ node_js:
 - '0.12'
 - '4'
 - '5'
+deploy:
+  provider: npm
+  email: tobias.bieniek@gmx.de
+  api_key:
+    secure: bogWVemzcl20WIX+oBF1gdV65RRNTv2S18zlwnZv1IlWn/HoS4ZFpuv3cb1qfAxTGkKqZGFeyguPMBNDZ93qG/QxLea1IZrE/d0HpX9aCYZHl3xKQnZsItyNm/IdbyQCc1uHtXTsSBpV7JyXrSxs31B61p69bnsfl+yiD47OmqhH0Ktsx/2oIFbzzY1pD3DZs5DPAlnZSH8t763ae7H1nM6RjE1dVc/Qb9kjNZBHMiruiknvc8qzfbjb24DzyeEIkC7IIGic08YD1/lCgo2Pdjr/uM4JbjduJpwW1vpG5xQ/M6Zcda0YS02JG946EhSyGD3PP2SeLVJjeguVFpgJIMhil+sGKWUarKMctwn781D7FiU/1KaRFBvEOnwBlUEV5x7GKaC8TX3FMfa6nWHOTlzZKArJmwj/FQ7RXq9iP5SXbgdHPPKnpqeOCQX2qBrL3BKLBGvXnODHYAuHZUYc7vklAmJUjNs3oc1J9+ySf3RL1GuuNxl3IcTFxaUIbsX1v/w5nM8WW4dBMnT99Nm9ZQPDZhqtMOyejKMEDXTVV7SVQ6bF3XWyJ5B8YJ+vBuBnhWR2Qx1XMeD1n1YN6cetbsDkr8eisbGx6o/FDi2Z6tTU+SwGV/Nz83ffbyDm9LgRYbJCk7pRE6bvi3fDH2dVhPfScx0k6srd9zQSB46F1QY=
+  on:
+    tags: true
+    repo: Turbo87/chai-roughly
