@@ -5,7 +5,7 @@ var describe = mocha.describe;
 var it = mocha.it;
 var expect = chai.expect;
 
-chai.use(require('.'));
+chai.use(require('./index'));
 
 describe('expect(...).to.roughly.deep.equal(...)', function() {
   it('passes for empty objects', function() {
