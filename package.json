@@ -1,0 +1,32 @@
+{
+  "name": "chai-roughly",
+  "version": "1.0.0",
+  "description": "deep equals assertions with tolerance for chai",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Turbo87/chai-roughly.git"
+  },
+  "keywords": [
+    "assertions",
+    "testing",
+    "chai",
+    "chai-plugin",
+    "numbers",
+    "deep-eql",
+    "tolerance"
+  ],
+  "author": "Tobias Bieniek <tobias.bieniek@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Turbo87/chai-roughly/issues"
+  },
+  "homepage": "https://github.com/Turbo87/chai-roughly#readme",
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "mocha": "^2.4.5"
+  }
+}
