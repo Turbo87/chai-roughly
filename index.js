@@ -1,5 +1,3 @@
-var deepEql = require('deep-eql');
-
 var DEFAULT_TOLERANCE = 1e-6;
 
 module.exports = function (chai, utils) {
@@ -11,7 +9,7 @@ module.exports = function (chai, utils) {
       if (tolerance) {
         if (msg) flag(this, 'message', msg);
         this.assert(
-          deepEql(obj, utils.flag(this, 'object'), { tolerance: tolerance })
+          utils.eql(obj, utils.flag(this, 'object'), { tolerance: tolerance })
           , 'expected #{this} to roughly deeply equal #{exp}'
           , 'expected #{this} to not roughly deeply equal #{exp}'
           , obj
