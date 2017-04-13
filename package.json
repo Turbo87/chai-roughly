@@ -29,7 +29,5 @@
     "chai": "^3.5.0",
     "mocha": "^3.0.0"
   },
-  "dependencies": {
-    "deep-eql": "git+https://github.com/Turbo87/deep-eql.git#9bad4db"
-  }
+  "dependencies": {}
 }
