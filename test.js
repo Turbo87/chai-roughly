@@ -7,37 +7,37 @@ var expect = chai.expect;
 
 chai.use(require('./index'));
 
-describe('expect(...).to.roughly.deep.equal(...)', function() {
+describe('expect(...).to.masOMenos.deep.equal(...)', function() {
   it('passes for empty objects', function() {
-    expect({}).to.roughly.deep.equal({});
+    expect({}).to.masOMenos.deep.equal({});
   });
 
-  it('passes for roughly similar values', function() {
-    expect({ value: 12345 }).to.roughly.deep.equal({ value: 12345.01 });
+  it('passes for mas o menos similar values', function() {
+    expect({ value: 12345 }).to.masOMenos.deep.equal({ value: 12345.01 });
   });
 
   it('fails for different values', function() {
     expect(function() {
-      expect({ value: 12345 }).to.roughly.deep.equal({ value: 12345.1 });
+      expect({ value: 12345 }).to.masOMenos.deep.equal({ value: 12345.1 });
     }).to.throw();
   });
 
-  it('passes for multiple roughly similar values', function() {
+  it('passes for multiple mas o menos similar values', function() {
     expect({
       value: 12345,
       other: 0.1234,
-    }).to.roughly.deep.equal({
+    }).to.masOMenos.deep.equal({
       other: 0.123400001,
       value: 12345.00001,
     });
   });
 
-  it('passes for roughly similar nested values', function() {
+  it('passes for mas o menos similar nested values', function() {
     expect({
       sub: {
         value: 42,
       },
-    }).to.roughly.deep.equal({
+    }).to.masOMenos.deep.equal({
       sub: {
         value: 41.99999,
       },
