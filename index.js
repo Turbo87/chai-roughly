@@ -12,8 +12,8 @@ module.exports = function (chai, utils) {
         if (msg) flag(this, 'message', msg);
         this.assert(
           deepEql(obj, utils.flag(this, 'object'), { tolerance: tolerance })
-          , 'expected #{this} to roughly deeply equal #{exp}'
-          , 'expected #{this} to not roughly deeply equal #{exp}'
+          , 'expected #{this} to mas o menos deeply equal #{exp}'
+          , 'expected #{this} to not mas o menos deeply equal #{exp}'
           , obj
           , this._obj
           , true
@@ -28,13 +28,13 @@ module.exports = function (chai, utils) {
   Assertion.overwriteMethod('eql', assertEql);
   Assertion.overwriteMethod('eqls', assertEql);
 
-  function explicitRoughly(tolerance) {
+  function explicitMasOMenos(tolerance) {
     utils.flag(this, 'tolerance', tolerance);
   }
 
-  function defaultRoughly() {
+  function defaultMasOMenos() {
     utils.flag(this, 'tolerance', DEFAULT_TOLERANCE);
   }
 
-  Assertion.addChainableMethod('roughly', explicitRoughly, defaultRoughly);
+  Assertion.addChainableMethod('masOMenos', explicitMasOMenos, defaultMasOMenos);
 };

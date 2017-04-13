@@ -1,6 +1,6 @@
 {
-  "name": "chai-roughly",
-  "version": "1.0.0",
+  "name": "chai-mas-o-menos",
+  "version": "0.0.1",
   "description": "deep equals assertions with tolerance for chai",
   "main": "index.js",
   "scripts": {
@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Turbo87/chai-roughly.git"
+    "url": "git+https://github.com/roryqueue/chai-mas-o-menos.git"
   },
   "keywords": [
     "assertions",
@@ -17,14 +17,17 @@
     "chai-plugin",
     "numbers",
     "deep-eql",
-    "tolerance"
+    "tolerance",
+    "mas",
+    "o",
+    "menos"
   ],
-  "author": "Tobias Bieniek <tobias.bieniek@gmail.com>",
+  "author": "Rory Quinlan <rjamesquinlan@gmail.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/Turbo87/chai-roughly/issues"
+    "url": "https://github.com/roryqueue/chai-mas-o-menos/issues"
   },
-  "homepage": "https://github.com/Turbo87/chai-roughly#readme",
+  "homepage": "https://github.com/roryqueue/chai-mas-o-menos#readme",
   "devDependencies": {
     "chai": "^3.5.0",
     "mocha": "^3.0.0"
