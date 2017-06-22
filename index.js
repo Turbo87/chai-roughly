@@ -3,11 +3,11 @@ var type = require('type-detect');
 
 var DEFAULT_TOLERANCE = 1e-6;
 
-module.exports = function (chai, utils) {
+module.exports = function(chai, utils) {
   var Assertion = chai.Assertion;
 
   function assertEql(_super) {
-    return function (obj, msg) {
+    return function(obj, msg) {
       var comparator = utils.flag(this, 'comparator');
       if (comparator) {
         if (msg) flag(this, 'message', msg);
@@ -73,7 +73,7 @@ function simpleEqual(a, b) {
 
 function createComparator(numberCompare) {
 
-  return function (a, b) {
+  return function(a, b) {
     if (simpleEqual(a, b)) {
       return true;
     } else if ('number' !== type(a) || 'number' !== type(b)) {
@@ -95,19 +95,19 @@ function relativeTest(a, b, relativeTolerance) {
 }
 
 function createAbsoluteComparator(absoluteTolerance) {
-  return createComparator(function (a, b) {
+  return createComparator(function(a, b) {
     return absoluteTest(a, b, absoluteTolerance);
   });
 }
 
 function createRelativeComparator(relativeTolerance) {
-  return createComparator(function (a, b) {
+  return createComparator(function(a, b) {
     return relativeTest(a, b, relativeTolerance);
   });
 }
 
 function createAbsoluteOrRelativeComparator(absoluteTolerance, relativeTolerance) {
-  return createComparator(function (a, b) {
+  return createComparator(function(a, b) {
     return absoluteTest(a, b, absoluteTolerance) || relativeTest(a, b, relativeTolerance);
   });
 
