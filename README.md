@@ -29,9 +29,7 @@ chai.use(require('chai-roughly'));
 ```
 
 Now you can use the `expect(...).to.roughly.deep.equal(...)` chain for deep
-equals assertions with tolerance for numbers. The default tolerance is `1e-6`
-and can be overwritten by using e.g.
-`expect(...).to.roughly(0.001).deep.equal(...)`.
+equals assertions with tolerance for numbers. 
 
 ```js
 it('works', function() {
@@ -39,6 +37,35 @@ it('works', function() {
 });
 ```
 
+The default tolerance is `1e-6` and can be overwritten.  For example:
+
+```js
+it('works', function() {
+  expect({ value: 42 }).to.roughly(0.001).deep.equal({ value: 41.9999999 });
+});
+```
+
+The tolerance is a relative tolerance.
+
+In addition a comparator function can be specified corresponding to the comparator which 
+`deep-eql` accepts.  
+
+```js
+
+var comparator = roughly.createAbsoluteComparator(0.01);
+
+it('works', function() {
+  expect({ value: 42 }).to.roughly(comparator).deep.equal({ value: 41.9999999 });
+});
+```
+
+There are several helper functions to create comparator functions which are exported in the roughly module:
+
+```js
+function createAbsoluteComparator(absoluteTolerance)
+function createRelativeComparator(relativeTolerance)
+function createAbsoluteOrRelativeComparator(absoluteTolerance, relativeTolerance)
+```
 
 License
 ------------------------------------------------------------------------------
