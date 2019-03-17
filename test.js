@@ -37,8 +37,8 @@ describe('expect(...).to.roughly.deep.equal(...)', function() {
       var good = ['pastor',  2.9999999 ];
       var bad = [ 'pastor',  3.1 ];
 
-      expect(good).to.be.deep.almost(exp);
-      expect(bad).to.not.be.deep.almost(exp);
+      expect(good).to.roughly.deep.equal(exp);
+      expect(bad).to.not.roughly.deep.equal(exp);
     })
 
     it('should modify deep-deep equality checks on arrays with objects objects with default tolerance', function () {
@@ -51,9 +51,9 @@ describe('expect(...).to.roughly.deep.equal(...)', function() {
       var bad2 = [{ taco: 'pastor', quantity: 3 },
                   { taco: 'pastor', quantity: [{a:2,b:1}] }, ref[3.1,4]];
 
-      expect(good).to.be.deep.almost(exp)
-      expect(bad1).to.not.be.deep.almost(exp)
-      expect(bad2).to.not.be.deep.almost(exp)
+      expect(good).to.roughly.deep.equal(exp);
+      expect(bad1).to.not.roughly.deep.equal(exp);
+      expect(bad2).to.not.roughly.deep.equal(exp);
   })
 
   it('passes for roughly similar nested values', function() {
